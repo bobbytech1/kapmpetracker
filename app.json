@@ -23,7 +23,17 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "platforms": ["ios", "android", "web"],
-    "sdkVersion": "51.0.0"
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "sdkVersion": "51.0.0",
+    "plugins": [
+      "expo-font",
+      {
+        "fonts": ["./assets/fonts/HelveticaNeueBlack.otf", "./assets/fonts/HelveticaNeueBold.otf"]
+      }
+    ]
   }
 }

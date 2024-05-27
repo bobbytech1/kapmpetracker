@@ -10,7 +10,7 @@ export function LoadingScreen() {
     useEffect(() => {
         const timer = setTimeout(() => {
           navigation.navigate('Welcome'); 
-        }, 5000); 
+        }, 1500); 
     
         return () => clearTimeout(timer);
       }, [navigation]);
