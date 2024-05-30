@@ -5,12 +5,19 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { Welcome } from './screens/WelcomeScreen';
 import { NativeWindStyleSheet } from 'nativewind';
+import { FontProvider, useFontContext } from './contexts/FontContext';
 
 const Stack = createNativeStackNavigator()
 
+const AppContent = () => {
+  const fontsLoaded = useFontContext();
+
+  if (!fontsLoaded) {
+    return null;  // Render nothing until fonts are loaded
+  }
 
 
-export default function App() {
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -34,6 +41,14 @@ export default function App() {
       </Stack.Navigator>
       
     </NavigationContainer>
+  );
+}
+
+export default function App() {
+  return (
+    <FontProvider>
+      <AppContent />
+    </FontProvider>
   );
 }
 

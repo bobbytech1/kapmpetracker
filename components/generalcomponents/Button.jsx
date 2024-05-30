@@ -24,8 +24,8 @@ export function CustomButton({message}) {
       }
   return (
     <>
-        <View className="flex justify-center items-center" onLayout={onLayoutRootView}>
-            <TouchableOpacity className="bg-btn-color flex justify-center items-center rounded-11px text-white uppercase font-500 tracking-6px" style={styles.custombutton}>{message}</TouchableOpacity>
+        <View className="flex justify-center items-center">
+            <TouchableOpacity className="bg-btn-color flex justify-center items-center rounded-11px text-white uppercase font-500 tracking-2px" style={styles.custombutton}>{message}</TouchableOpacity>
         </View>
     </>
   );
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     custombutton:{
         height: hp(7),
         width: wp(80),
-        fontSize: wp(4.3), 
-        fontFamily: 'HelveticaNeueBlack'
+        fontSize: wp(3), 
+        fontFamily: 'HelveticaNeueLight'
     }
 })

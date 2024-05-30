@@ -30,10 +30,13 @@
     ],
     "sdkVersion": "51.0.0",
     "plugins": [
-      "expo-font",
+      [
+        "expo-font",
       {
-        "fonts": ["./assets/fonts/HelveticaNeueBlack.otf", "./assets/fonts/HelveticaNeueBold.otf"]
+        "fonts": ["./assets/fonts/HelveticaNeueBlack.otf", "./assets/fonts/HelveticaNeueBold.otf", "./assets/fonts/HelveticaNeueLight.otf"]
       }
+      ]
+
     ]
   }
 }

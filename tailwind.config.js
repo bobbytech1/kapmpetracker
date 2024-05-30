@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         'custom-color': '#0F973D',
         'btn-color': '#015B20',
+        'des-color': '#667185',
       },
       borderRadius: {
         '1px': '1px',
