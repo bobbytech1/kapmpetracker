@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import { CustomButton } from "../components/generalcomponents/Button";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { useNavigation } from "@react-navigation/native";
 import { useFontContext } from "../contexts/FontContext";
 import LoginImage from "../svg/login.svg"
 
 export function Welcome() {
-
+    const navigation = useNavigation();
   const fontsLoaded = useFontContext();
 
   if (!fontsLoaded) {
@@ -27,7 +28,7 @@ export function Welcome() {
           </View>
           <View style={styles.btncont}>
             <CustomButton message={"I’m new here!"} />
-            <Text style={styles.haveaccnt} className="font-600 text-des-color text-center">I ALREADY HAVE AN ACCOUNT</Text>
+            <Text style={styles.haveaccnt} className="font-600 text-des-color text-center" onPress={()=>navigation.navigate('Login')}>I ALREADY HAVE AN ACCOUNT</Text>
           </View>
         </View>
 

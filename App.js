@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { Welcome } from './screens/WelcomeScreen';
+import Login from './screens/LoginScreen';
 import { NativeWindStyleSheet } from 'nativewind';
 import { FontProvider, useFontContext } from './contexts/FontContext';
 
@@ -21,7 +22,7 @@ const AppContent = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName='Loading'
+      initialRouteName='Login'
       >
       <Stack.Screen
       name='Loading'
@@ -34,6 +35,14 @@ const AppContent = () => {
       <Stack.Screen
         name='Welcome'
         component={Welcome}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name='Login'
+        component={Login}
         options={{
           headerShown: false,
         }}
